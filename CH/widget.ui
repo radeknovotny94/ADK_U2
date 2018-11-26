@@ -158,6 +158,13 @@
       </widget>
      </item>
      <item>
+      <widget class="QPushButton" name="table">
+       <property name="text">
+        <string>Create Table (generate points+create CH)</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QLabel" name="label">
        <property name="text">
         <string>Calculation time:</string>

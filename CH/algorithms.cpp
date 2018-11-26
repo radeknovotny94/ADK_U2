@@ -56,7 +56,7 @@ double Algorithms::get2LinesAngle(QPoint &p1,QPoint &p2,QPoint &p3, QPoint &p4)
 
 QPolygon Algorithms::CHJarvis (vector<QPoint> &points)
 {
-    double eps = 1.0e-15;
+    double eps = 1.0e-10;
 
     //Create convex hull using the Jarvis Scan procedure
     QPolygon ch;

@@ -23,6 +23,8 @@ private slots:
 
     void on_generate_clicked();
 
+    void on_table_clicked();
+
 private:
     Ui::Widget *ui;
 //    int point_type=0; //1 for random, 2 for grid, 3 for cluster
