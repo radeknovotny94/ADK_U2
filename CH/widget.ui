@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Widget</string>
+   <string>Convex Hull</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
@@ -154,13 +154,6 @@
       <widget class="QPushButton" name="create_ch">
        <property name="text">
         <string>Create CH</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="table">
-       <property name="text">
-        <string>Create Table (generate points+create CH)</string>
        </property>
       </widget>
      </item>

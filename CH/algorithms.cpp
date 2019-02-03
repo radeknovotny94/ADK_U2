@@ -69,7 +69,7 @@ QPolygon Algorithms::CHJarvis (vector<QPoint> &points)
     QPoint s = points[0];
 
     //Create Pjj
-    QPoint pjj (s.x(),q.y());
+    QPoint pjj (s.x()-1,q.y());
     QPoint pj = q;
 
     //Add pivot to CH
@@ -228,6 +228,19 @@ QPolygon Algorithms::CHSweep (vector<QPoint> &points)
     //Create convex hull using the sweepline procedure
     QPolygon ch;
 
+    //Delete duplicates points
+    for(int i = 0; i < points.size()-1; i++)
+    {
+        for(int j = i+1; j < points.size(); j++)
+        {
+            if(points[j].x() == points[i].x() && points[j].y() == points[i].y())
+            {
+                points.erase(points.begin()+j);
+                j--;
+            }
+        }
+    }
+
     //sort by X
     std::sort(points.begin(), points.end(), SortByXAsc());
 
@@ -276,7 +289,8 @@ QPolygon Algorithms::CHSweep (vector<QPoint> &points)
     {
         //Point in the upper halfplane
         //Link i with predecessor/successor
-        if(points[i].y() > points[i-1].y())
+        if(getPointLinePosition(points[i], points[p[i-1]], points[i-1]) == LEFT)
+        //if(points[i].y() > points[i-1].y())
         {
             p[i]=i-1;
             n[i]=n[i-1];

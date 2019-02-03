@@ -1,7 +1,8 @@
 #include<cmath>
+#include<fstream>
 
 #include "points.h"
-
+#include "sortbyyasc.h"
 Points::Points()
 {
 
@@ -15,7 +16,11 @@ std::vector<QPoint> Points::generateRandom(int &n, QSize &size)
     std::vector<QPoint> points;
     for (int i = 0; i<n;i++)
         points.push_back({rand()%w,rand()%h});
-
+//    double eps = 1.0e-5;
+//    std::sort(points.begin(),points.end(), sortByYAsc());
+//    for(int i = 0; i < points.size(); i++)
+//        if(std::fabs(points[i].x()-points[i+1].x()) < eps)
+//            points.erase(points.begin() + i);
     return points;
 }
 

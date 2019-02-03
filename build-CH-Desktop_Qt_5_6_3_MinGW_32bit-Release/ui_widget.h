@@ -44,7 +44,6 @@ public:
     QLabel *label_method;
     QComboBox *method_ch;
     QPushButton *create_ch;
-    QPushButton *table;
     QLabel *label;
     QLabel *label_time;
     QSpacerItem *verticalSpacer_2;
@@ -130,11 +129,6 @@ public:
 
         verticalLayout->addWidget(create_ch);
 
-        table = new QPushButton(Widget);
-        table->setObjectName(QStringLiteral("table"));
-
-        verticalLayout->addWidget(table);
-
         label = new QLabel(Widget);
         label->setObjectName(QStringLiteral("label"));
 
@@ -165,7 +159,7 @@ public:
 
     void retranslateUi(QWidget *Widget)
     {
-        Widget->setWindowTitle(QApplication::translate("Widget", "Widget", Q_NULLPTR));
+        Widget->setWindowTitle(QApplication::translate("Widget", "Convex Hull", Q_NULLPTR));
         label_2->setText(QApplication::translate("Widget", "What to do:", Q_NULLPTR));
         label_info->setText(QApplication::translate("Widget", "Generate points or input points manually.", Q_NULLPTR));
         label_number->setText(QApplication::translate("Widget", "Number of points:", Q_NULLPTR));
@@ -188,7 +182,6 @@ public:
          << QApplication::translate("Widget", "Sweep Line", Q_NULLPTR)
         );
         create_ch->setText(QApplication::translate("Widget", "Create CH", Q_NULLPTR));
-        table->setText(QApplication::translate("Widget", "Create Table (generate points+create CH)", Q_NULLPTR));
         label->setText(QApplication::translate("Widget", "Calculation time:", Q_NULLPTR));
         label_time->setText(QString());
         clear->setText(QApplication::translate("Widget", "Clear", Q_NULLPTR));

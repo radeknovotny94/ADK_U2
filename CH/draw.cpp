@@ -25,11 +25,12 @@ void Draw::paintEvent(QPaintEvent *e)
 {
    QPainter painter(this);
    painter.begin(this);
-   painter.setPen(Qt::black);
+   painter.setPen(QPen(Qt::red, 4));
 
    //Draw convex hull
    painter.drawPolygon(ch);
 
+   painter.setPen(Qt::black);
    //Draw points
    for(int i = 0; i < points.size(); i++)
    {
